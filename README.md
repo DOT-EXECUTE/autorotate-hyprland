@@ -33,13 +33,13 @@ yay -S iio-sensor-proxy iio-hyprland
 
 **Configure Hyprland:**
 1. Add to your Hyprland config for auto-start:
-   ```
-   exec-once = ~/.config/hypr/scripts/rotate-screen.sh
+   ```lua
+   hl.exec_cmd(~/.config/hypr/scripts/rotate-screen.sh)
    ```
 
 2. Add keybinding to toggle rotation:
-   ```
-   bind = SUPER, R, exec, ~/.config/hypr/scripts/toggle-rotation.sh
+   ```lua
+   hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("~/.config/hypr/scripts/toggle-rotation.sh"))
    ```
 
 3. Restart Hyprland and enjoy automatic rotation!
